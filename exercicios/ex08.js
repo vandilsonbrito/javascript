@@ -1,6 +1,6 @@
 function pontuacao(pontos) {
     let array = JSON.parse("[" + pontos + "]");
-    
+
     let quebraDeRecorde = 0
     let menorPontuacao = array[0]
     let aux = 0
