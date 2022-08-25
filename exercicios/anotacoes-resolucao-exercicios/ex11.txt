@@ -1,0 +1,14 @@
+-> Receber um ano qualquer e retornar se é bissexto ou não.
+
+REGRAS: 
+De 4 em 4 anos é ano bissexto;
+De 100 em 100 anos não é ano bissexto;
+De 400 em 400 anos é ano bissexto;
+Prevalecem as últimas regras sobre as primeiras.
+
+-> Primeira coisa é verificar se ele é divisível por 400 (usando %), se sim,
+é bissexto.
+
+-> Verificar se é divisível por 4, sendo verdadeiro a afirmação
+anterior, verificar se é divisível por 100, se sim, não é bissexto.
+Se não, ele é bissexto.

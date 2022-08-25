@@ -1,0 +1,7 @@
+-> Ler o código e as três notas do aluno (essas em um vetor)
+
+-> Após isso, ordenar o vetor de notas com a função sort()
+	Precisamos ordenar para conseguir multiplicar a nota maior por 4.
+
+-> Após isso, é só calcular a média e fazer dois if comparando se a nota é
+maior igual ou menor que 5

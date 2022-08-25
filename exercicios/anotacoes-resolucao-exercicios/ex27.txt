@@ -1,0 +1,12 @@
+-> Ler alturas e taxas de crescimento.
+
+-> Calcular se existe uma criança menor:
+	fazer um if e vendo se as alturas são diferentes.
+
+		verificar se a taxa de crescimento da criança menor é maior do
+		a taxa da criança maior.
+			
+			fazer um while - enquanto altura do maior, maior ou 
+			igual que altura do menor, multiplicar cada altura
+			por suas taxas de crescimento.
+				RESULTADO = i (quantidade de tempo)

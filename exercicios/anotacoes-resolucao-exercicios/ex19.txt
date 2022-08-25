@@ -1,0 +1,3 @@
+-> ler qual item e quantidade desejada
+
+-> fazer em cada case a multiplicação do valor do item pela quantidade

@@ -1,0 +1,11 @@
+-> Ler valor 
+
+-> Ir dividindo o valor pelas notas (100, 50, 10, 5, 1), pegando a parte 
+inteira e o resto da divisão com as seguintes instruções:
+
+-> Começo dividindo por 100 => Math.trunc(valor / 100) -> e pego o valor inteiro da operação com o 'Math.truc()'
+		     Depois => Math.trunc((valor % 100) / 50)   => Depois vamos pegando o resto da divisão inteira que vai representando o valor restante  
+			       Math.trunc((valor % 100) % 50) / 10)  e dividimos pelo valor da nota (pegando a parte inteira com o trucn())
+				.
+				.
+				.

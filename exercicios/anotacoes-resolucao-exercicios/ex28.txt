@@ -1,0 +1,5 @@
+-> Ler um vetor de números inteiros.
+
+-> Dentro de um for, verificar se cada número é par ou ímpar. 
+ 	Acrescentar em um contador cada vez que um número for par e ímpar
+	Pra finalizar, é só mostrar os dois contadores.

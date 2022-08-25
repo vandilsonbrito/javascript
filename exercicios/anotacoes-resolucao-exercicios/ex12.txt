@@ -1,0 +1,6 @@
+-> Calcular o fatorial de um número.
+
+-> Vamos fazer um laço de repetição repetindo o total de vezes do número e
+fazendo a seguinte operação: 
+
+Fatorial de número! = (número. (número - 1) + (número -2)...) (faremos isso a quantidade de vezes que o número representa)

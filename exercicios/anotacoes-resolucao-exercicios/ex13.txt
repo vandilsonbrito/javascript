@@ -1,0 +1,2 @@
+-> Para esse exepmlo usamos a estrutura normal do switch que seria um monte de
+"if". Se dia 1 => imprimir Segunda-feira, dia útil.

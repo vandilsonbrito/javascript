@@ -1,0 +1,13 @@
+-> Aluno recebe nota 0 a 100
+
+-> Alunos com nota abaixo de 40 são reprovados
+
+-> Arredonadamento: Se a diferença entre a nota e o próximo múltiplo de 5
+for menor que 3, arredondar essa nota para esse próximo múltiplo de 5.
+ 
+-> Se nota for abaixo de 38 não é feito nenhum arredondamento, pois mesmo com
+o arredondamento resultaria na não aprovação do aluno
+
+-> Abordagem para arredondamento: Divida a nota por 5 e obtenha o valor decimal usando math.ceil
+(A função Math.ceil(x) retorna o menor número inteiro maior ou igual a "x".)
+Por fim, multiplique por 5 para obter o resultado.
