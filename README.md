@@ -107,9 +107,9 @@ Código Descrição do Produto Preço
 500 Refrigerante R$ 3,50
 600 Suco R$ 2,80
 
-Implemente uma função que receba como parâmetros o código do item pedido, a quantidade e calcule o valor
-a ser pago por aquele lanche. Considere que a cada execução somente será calculado um item. Use o
-comando switch. Crie um caso default para produto não existente.
+  Implemente uma função que receba como parâmetros o código do item pedido, a quantidade e calcule o valor
+  a ser pago por aquele lanche. Considere que a cada execução somente será calculado um item. Use o
+  comando switch. Crie um caso default para produto não existente.
 
 
 20) Crie um programa para informar quais e quantas notas são necessárias para entregar o mínimo de cédulas
