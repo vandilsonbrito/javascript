@@ -1,5 +1,13 @@
 const maiorOuIgual = (primeiroNum, segundoNum) => {
-    return primeiroNum >= segundoNum ? true : false
+    if(primeiroNum > segundoNum){ 
+        return true
+    }
+    else if(primeiroNum === segundoNum){
+        return true
+    }
+    else {
+        return false
+    }
 }
 
-console.log(maiorOuIgual(5,7))
+console.log(maiorOuIgual(0,"0"))
