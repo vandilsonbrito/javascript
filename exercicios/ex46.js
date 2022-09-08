@@ -1,4 +1,4 @@
-const inverso = (valor) => {
+/*const inverso = (valor) => {
     if(valor === typeof(Boolean)){
         if(true) {
             return false
@@ -18,6 +18,8 @@ const inverso = (valor) => {
     else  {
         return console.log(`booleano ou número esperados, mas o parâmetro é do tipo ${typeof(valor)}`)
     }
-}
+}*/
 
-inverso(5)
+console.log("string" === typeof(String))
+
+//inverso(5)
