@@ -1,25 +1,19 @@
-/*const inverso = (valor) => {
-    if(valor === typeof(Boolean)){
-        if(true) {
-            return false
+const inverso = (valor) => {
+    if(typeof valor == "boolean"){
+        if("true") {
+            return console.log(false)
         }
         else {
-            return true
-        }     
+            return console.log(true)
+        }
     }
-    else if(valor == typeof(Number)) {
-        if(valor > 0) {
-            return valor * (-1)
-        }
-        else {
-            return valor * (-1)
-        }
+    else if(typeof valor == "number") {
+        return console.log(valor * (-1)) 
     }
     else  {
         return console.log(`booleano ou número esperados, mas o parâmetro é do tipo ${typeof(valor)}`)
     }
-}*/
+}
+ 
+inverso("nn")
 
-console.log("string" === typeof(String))
-
-//inverso(5)
