@@ -5,9 +5,9 @@ function despesasTotais(despesas) {
 }
 
 const despesas = [
-    {nome: "Jornal online", categoria: "Informação", preco: "89.99"},
-    {nome: "Cinema", categoria: "Entretenimento", preco: "149.89"},
-    {nome: "Iphone 14", categoria: "Eltrônicos", preco: "10969.99"}
+    {nome: "Jornal online", categoria: "Informação", preco: 89.99},
+    {nome: "Cinema", categoria: "Entretenimento", preco: 149.89},
+    {nome: "Iphone 14", categoria: "Eltrônicos", preco: 10969.99}
 ]
 
-console.log(despesasTotais(despesas))
+console.log(despesasTotais(despesas).toFixed(2))
