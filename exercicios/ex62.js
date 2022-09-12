@@ -1,4 +1,4 @@
-function contarPalavraas(palavras) {
+function contarPalavras(palavras) {
     let contador = 0
     for (let index = 0; index < palavras.length; index++) {
         if(palavras[index] == ' '){
@@ -10,4 +10,14 @@ function contarPalavraas(palavras) {
     
     
 }
-console.log(contarPalavraas('Me divirto aprendendo a programar'))
+console.log(contarPalavras('Me divirto aprendendo a programar'))
+
+// Outra opção
+
+function contarPalavras2(palavras) {
+    const frase = palavras.split(" ")
+    return frase.length
+}
+
+console.log(contarPalavras2('Me divirto aprendendo a programar'))
+
