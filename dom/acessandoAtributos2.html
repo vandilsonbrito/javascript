@@ -16,8 +16,28 @@
             <li>Copo Descartável</li>
         </ul>
     </div>
+    
     <script>
-        // ...
+        // Selecionando o elemento com o id #compras
+        const lista = document.querySelector('#compras')
+        console.log('Elemento "ul"....................')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.destino)
+        console.log('getAttibute', lista.getAttribute('destino'))
+        console.log('hasAttibute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa') // Mudando o valor de atributo 
+        lista.setAttribute('status', 'aberto') // Criando um novo atributo
+        lista.removeAttribute('destino') // Removendo o atributo   
+
+        console.log(lista.dataset.urgencia)
+        lista.dataset.urgencia = 4
+        console.log(lista.getAttribute('data-urgencia'))
+
+        // cuidado com as palavaras reservadas da linguagem | no caso, "for"
+        const label = document.querySelector('label')
+        console.log(label.for) // undefined
+        console.log(label.htmlFor) // É preciso usar dessa maneira para palavras reservadas da linguagem
+        console.log(label.getAttribute('for'))
     </script>
 </body>
 

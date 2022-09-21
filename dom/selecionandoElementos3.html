@@ -30,8 +30,29 @@
         </select>
         <button>Pesquisar</button>
     </form>
+
     <script>
-        // ...
+        // Uma das formas de ter acesso aos formulários da página é essa:
+        console.log(document.forms) // Vai mostrar um array com todos os formulários do tipo HTMLCollection
+
+        // Outra forma de acessar um formulários específico:
+        console.log(document.forms[0]) // Me dê o form de índice 0 na coleção
+
+        // Outra forma de acessar o formulário é pela tag name, ou seja, o nome dele mesmo:
+        console.log(document.getElementsByName('pesquisa')) // Retorna um NodeList 
+        
+        // Formas de acessar elementos dentro do formulário
+        console.log(document.pesquisa)
+        console.log(document.pesquisa.q) // Entrou dentro do formulário 'pesquisa' e pegou o elemento q
+        
+        // Alterando input dessa mesma forma de acesso no formulário
+        document.pesquisa.q.value = 'Linux Brasil'
+        document.pesquisa.hl.value = 'en-us'
+
+        // Forma de ter acesso ao índice que está selecionado a partir de tal consulta (pesquisa.hl nesse caso)
+        console.log(document.pesquisa.hl.selectedIndex)
+
+
     </script>
 </body>
 

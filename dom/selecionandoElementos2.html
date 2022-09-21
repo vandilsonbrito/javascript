@@ -7,10 +7,38 @@
 </head>
 <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
-    <div>Segundo</div>
-    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
-    <script>              
-        // ...
+    <div wb-attrib>Segundo</div>
+    <div class="terceiro ultimo"><span>.terceiro .ultimo</span></div>
+
+    <script>             
+        // O querySelector espera um seletor css. Ele é bem mais flexível e permite selecionar id, classe, tag, atributo, atributo de um determinado tipo, elemento que tá dentro de outro, selecionar elementos que não tenham uma determianda classe... (ex: nth-child). Por isso, tem que usar o símbolo que representa esse elemento, no caso abaixo é um id, então #primeiro    
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        // Função para aplicar a classe destaque em determinado(s) elemento(s)
+        const selecionar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+            // O querySelector retorna um NodeList (Não HTMLCollection como no getElem...) e o NodeList é possível acessar a função forEach
+
+        // Função para remover a classe destaque em determinado(s) elemento(s)
+        const deselecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))    
+
+
+        selecionar('div')
+        deselecionar('#primeiro')
+
+        deselecionar('*') // Seletor universal
+        selecionar(':not(#primeiro)')
+
+        deselecionar('*')
+        selecionar(':nth-child(1)') // Selecionando todos os primeiros elementos da página
+
+        deselecionar('*')
+        selecionar('div:nth-of-type(1)') // Selecionando o primeiro elemento que seja div
+
+        deselecionar('*')
+        selecionar('[wb-attrib]') // Selecionar a partir de um atributo
+
     </script>
 </body>
 </html>

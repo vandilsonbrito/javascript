@@ -7,10 +7,39 @@
 </head>
 <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
-    <div>Segundo</div>
+    <div class="segundo ultimo">Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
-    <script>              
-        // ...
+
+    
+    <script>   
+        // Pegando o elemento com o id #primeiro e adicionando a classe destaque para essa div, ou seja, a div com o id #primeiro terá todas as características da classe destaque.           
+        document.getElementById('primeiro').classList.add('destaque') 
+
+
+        // Gerando uma lista das divs e armazenando na constante divs | isso será feito com o HTMLCollection (o que dificulta um na hora de manusear essa lsita)
+        const divs = document.getElementsByTagName('div')
+
+
+        // Transformando a lista divs em um Array e acessando cada div e removendo a classe .destaque de cada uma delas
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+
+        
+        // Outra forma de transformar o HTMLCollection em um Array, usando o operador Spread
+        const divsArray = [...divs]
+
+        // Adicionando a classe .destaque 
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        // Pegando as divs que contém a classe .ultimo 
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        // Varrendo as divs cujo têm a classe .ultimo e removendo a classe .destaque (Forma de varrer o HTMLCollection)
+        for(let e of ultimosElementos) {
+            e.classList.remove('destaque')
+            
+        }
+
+        const segundo = document.getElementsByClassName('segundo')
+        Array.from(segundo).forEach(e => e.classList.add('diferente'))
     </script>
 </body>
 </html>

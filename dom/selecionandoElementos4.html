@@ -21,8 +21,46 @@
     <div>
         <p>Fim</p>
     </div>
+
     <script>
-        // ...
+        // Colocando a função console.log nos protótipos do objeto | intuito de facilitar a impressão nos códigos seguintes
+        function log() {
+            console.log(this)
+        }
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        
+        const lista = document.querySelector('div ul') // Acessando a div e ul da página
+
+        // Como o DOM é uma estrutura em árvore é possível ter acesso ao pai, irmão, filho dessa estrutura
+        lista.parentNode.log() // Acessando o pai da lista ('div ul') Pai -> div
+        
+        lista.childNodes.log() // Acessando o(s) elemento(s) da lista | Acaba aparecendo 'text'(s), por conta do espaço em branco entre os li(s) de indentação do HTML
+
+        const primeiro = lista.firstChild
+        primeiro.log() // retorna text por conta do espaço em branco
+        
+        primeiro.nextSibling.log() // Retorna o irmão do primeiro elemento -> li
+
+        const ultimo = lista.lastChild
+        ultimo.log()
+        ultimo.previousSibling.log()
+
+
+        // Forma de pegar apenas os elementos 'desejáveis' da lista : li(s)
+        lista.children.log()
+        lista.firstElementChild.log()
+        lista.lastElementChild.log()
+
+        lista.parentNode.previousElementSibling.log() // Retorna o irmão do pai, nesse caso, a div <p>inicio<p>
+        lista.parentNode.nextElementSibling.log() // Retorna a div <p>fim<p>
+
+        // Outra forma de retornar o que é desejado sem precisar acessar parcialmente e sem os text's dos espaços
+        document.querySelectorAll('div ul li').log()
+        
     </script>
 </body>
 
