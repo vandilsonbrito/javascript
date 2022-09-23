@@ -9,7 +9,29 @@
 
 <body class="conteudo exercicio">
     <div>Elemento</div>
+
     <script>
-        // ...
+        
+        const item = document.querySelector('div')
+        // Setando position absolute para a div | Possibilitando ter acesso top e left
+        item.style.position = 'absolute' 
+
+        // Recebendo o evento do movimeto do mouse 
+        item.onmousemove = e => {
+
+            const item = e.target // e.target é quem disparou o evento, ou seja, a própria div nesse caso
+
+            item.style.cursor = 'move' // Mostra a opção de mover (símbolo na tela)
+
+            if(e.buttons) { // Verifica se o mouse tá clicado | se sim, retornará diferente de zero, portanto, verdadeiro
+
+                // Setando a div para que ela se mova juntamente com o mouse| ClientY é a altura, eixo vertical e Clientx é a largura, eixo horizontal
+
+                item.style.top = `${e.clientY - (item.clientHeight / 2)}px` // item.style.top é a distância que a div está do topo | menos metade da altura (para que o mouse sempre fique no meio do elemento)
+
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px` // item.style.left é a distância que a div está da margem esquerda da tela
+            }
+        }
+
     </script>
 </body>
